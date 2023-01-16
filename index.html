@@ -8,6 +8,7 @@
     <title>The Band</title>
     <link rel="icon" href="./assets/img/w3schools-logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 
@@ -37,8 +38,11 @@
             <!-- Begin: Search Button -->
             <div class="search-btn">
                 <i class="search-icon ti-search">
-
                 </i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!-- End: Search Button -->
 
@@ -81,17 +85,17 @@
                 <div class="row members-list">
                     <div class="col col-third text-center ">
                         <p class="member-name">Name</p>
-                        <img src="/assets/img/team/member1.jpg" alt="Name" class="member-img">
+                        <img src="./assets/img/team/member1.jpg" alt="Name" class="member-img">
                     </div>
 
                     <div class="col col-third text-center">
                         <p class="member-name">Name</p>
-                        <img src="/assets/img/team/member1.jpg" alt="Name" class="member-img">
+                        <img src="./assets/img/team/member1.jpg" alt="Name" class="member-img">
                     </div>
 
                     <div class="col col-third text-center">
                         <p class="member-name">Name</p>
-                        <img src="/assets/img/team/member1.jpg" alt="Name" class="member-img">
+                        <img src="./assets/img/team/member1.jpg" alt="Name" class="member-img">
                     </div>
 
                 </div>
@@ -309,6 +313,33 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+    </script>
+
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        // dong/ mo mobile menu 
+        mobileMenu.onclick = function () {
+            var isClosed = header.clientHeight == headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+        }
+
+        // tu dong dong menu 
+        var menuItems = document.querySelectorAll('#nav li a[href *="#"');
+        console.log(menuItems);
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function () {
+                header.style.height = null;
+            }
+        }
     </script>
 </body>
 

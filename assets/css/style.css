@@ -20,6 +20,8 @@ Mau sac
 Kieu dang (kieu chu, hinh tron,..)
 */
 #main {
+	/* thang nao chui ra khoi the cha -> mat luon  */
+	overflow: hidden;
 }
 
 /* Common */
@@ -71,7 +73,7 @@ Kieu dang (kieu chu, hinh tron,..)
 	margin-top: 46px;
 	/* padding chiem 50% cua chinh no */
 	padding-top: 50%;
-	background-image: url("/assets/img/slider/slider1.jpg");
+	background-image: url("/./w3_band/assets/img/slider/slider1.jpg");
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -105,6 +107,7 @@ Kieu dang (kieu chu, hinh tron,..)
 	left: 0;
 	right: 0;
 	z-index: 1;
+	overflow: hidden;
 }
 
 #nav {
@@ -163,14 +166,28 @@ Kieu dang (kieu chu, hinh tron,..)
 	padding: 0 21px;
 }
 
-#header .search-icon {
+#header .search-icon,
+#header .menu-icon {
 	color: white;
 	font-size: 20px;
 	line-height: 46px;
 }
 
+#header .menu-icon {
+	color: #fff;
+	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 13px;
+}
 #header .search-btn:hover {
 	background-color: #f44336;
+}
+
+#header .menu-icon:hover {
+	background-color: #ccc;
+	color: #000;
 }
 #content {
 }
@@ -197,9 +214,12 @@ Kieu dang (kieu chu, hinh tron,..)
 }
 #content .content-section {
 	width: 800px;
+	max-width: 100%;
 	padding: 64px 0;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 
 #content .members-list {
