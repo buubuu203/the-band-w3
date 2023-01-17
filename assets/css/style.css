@@ -85,6 +85,7 @@ Kieu dang (kieu chu, hinh tron,..)
 	color: #fff;
 	width: 100%;
 	bottom: 47px;
+	text-shadow: 0 0 1px #000;
 	/* left: 50%;
 	transform: translateX(-50%); */
 	text-align: center;
@@ -107,7 +108,7 @@ Kieu dang (kieu chu, hinh tron,..)
 	left: 0;
 	right: 0;
 	z-index: 1;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 #nav {
@@ -136,6 +137,7 @@ Kieu dang (kieu chu, hinh tron,..)
 #nav > li:hover > a {
 	color: black;
 	background-color: #ccc;
+	display: block;
 }
 
 #nav .subnav {
@@ -282,7 +284,7 @@ Kieu dang (kieu chu, hinh tron,..)
 /* places  */
 
 .places-lists {
-	margin-top: 32px;
+	margin-top: 16px;
 	margin-bottom: 48px;
 	padding-bottom: 48px;
 	background-color: #000;
